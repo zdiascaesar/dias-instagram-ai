@@ -36,6 +36,9 @@ async def process_batches_periodically():
             if batch_count > 0:
                 logger.info(f"Processed {batch_count} batches")
             await asyncio.sleep(5)  # Check every 5 seconds
+        except asyncio.CancelledError:
+            logger.info("Batch processing task cancelled")
+            break
         except Exception as e:
             logger.error(f"Error in batch processing: {e}")
             logger.error(traceback.format_exc())
@@ -138,6 +141,8 @@ async def main():
 if __name__ == "__main__":
     try:
         asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Application stopped by user")
     except Exception as e:
         logger.error(f"Unhandled exception in main: {e}")
         logger.error(traceback.format_exc())
