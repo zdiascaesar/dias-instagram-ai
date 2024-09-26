@@ -1,9 +1,10 @@
 from collections import deque
 import time
-from ai_handler import generate_ai_response
+from ai_handler import generate_ai_response, extract_client_info
 from instagram_api import send_message as send_instagram_message, reply_to_comment, fetch_comment_text
 from utils import is_duplicate_message, conversation_history
 from reminder_bot import get_reminder_bot
+from database_handler import save_or_update_client_data
 import logging
 
 logger = logging.getLogger(__name__)
@@ -36,6 +37,16 @@ async def handle_instagram_message(message_data):
 
     if is_duplicate_message(message_queue, sender_id, message_text, timestamp):
         return
+
+    # Extract client information, including final decision and payment status
+    client_info = extract_client_info(message_text)
+
+    # Update or save client data
+    try:
+        await save_or_update_client_data(sender_id, client_info)
+        logger.info(f"Successfully saved/updated client data for sender {sender_id}")
+    except Exception as e:
+        logger.error(f"Error while saving/updating client data: {str(e)}")
 
     # Add user to reminder bot tracking
     await reminder_bot.add_user_message(sender_id)
