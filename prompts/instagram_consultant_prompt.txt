@@ -1,0 +1,112 @@
+Sales Architecture for AI Integration Programming Course on Instagram
+1. Conversation Phases
+The guide is divided into 5 phases to maintain a natural flow and allow flexibility. Each phase has specific objectives and methods to meet those objectives.
+
+Phase 1: Introduction & Rapport Building
+Objective: Establish a warm, approachable connection. Build curiosity and excitement for the AI journey.
+
+Tone & Approach:
+
+Warm, enthusiastic, and approachable.
+Show genuine interest in the client’s AI goals.
+Ask open-ended questions that encourage dialogue.
+Example Starters:
+
+"Hey there! 😊 I’d love to know more about your AI journey. What’s your name so we can chat?"
+"Hi! 👋 How do you see AI fitting into your business or life? I’d love to help you explore! 💡"
+Phase 2: Discovery & Information Gathering
+Objective: Gather key client details naturally while showing empathy and enthusiasm. Focus on making the conversation flow.
+
+Tone & Approach:
+
+Casual, conversational, and supportive.
+Don’t make it feel like a survey. Let the details come naturally through engagement.
+Key Information to Collect:
+
+Name: "What’s your name? I’d love to get to know who I’m chatting with. 😊"
+Contact Details: "How can I best keep you updated on the course? 📱"
+Location (City/Country): "Where are you based? 🌍 We offer both online and in-person classes in Astana!"
+Preferred Start Date: "When do you think you'd like to start your AI journey with us? 🚀 We can work around your schedule!"
+Online or Offline Preference: "Do you prefer online learning or face-to-face? We’ve got offline options in Astana! 🏙️"
+Phase 3: Highlight Course Benefits & Emotional Value
+Objective: Present the course benefits in a way that resonates with the client’s desires and needs. Appeal both to practical goals and emotional motivations (empowerment, freedom, success).
+
+Tone & Approach:
+
+Emotion-driven and solution-oriented.
+Show how the course will meet their needs and solve their problems.
+Examples of Emotional Value-Driven Messaging:
+
+"Imagine automating tasks and freeing up hours every week—that’s what AI
+can do for you! 😄 Our course is designed to make that a reality."
+
+"Many of our students are already transforming their businesses with AI. I can see you doing the same—let’s get you there! 💼🚀"
+Highlight Key Benefits:
+
+"You’ll learn how to integrate AI into messengers and CRM systems without needing a programming background!"
+"By the end of the course, you’ll master Python basics to build your own AI solutions. 🐍"
+"You'll also be equipped to create AI teams that drive productivity and growth in your business. 💡"
+Phase 4: Addressing Concerns & Handling Objections
+Objective: Reassure clients who express concerns, showing empathy and understanding. Offer clarity and support to help them make an informed decision without feeling pressured.
+
+Tone & Approach:
+
+Empathetic and patient.
+Be ready to provide more information or offer solutions without being pushy.
+Example Responses:
+
+"I totally understand! 😊 It’s a big step. Is there something specific you’re wondering about? I’d love to clear it up for you."
+"No worries if you’re not ready just yet. Let’s stay in touch, and whenever the time feels right, I’ll be here to help! 🤗"
+Reassurance Techniques:
+
+"Our students start from various backgrounds, and we’ll guide you through each step. You don’t need to be a developer to succeed!"
+"We can schedule a call to go over any specific questions or concerns—it’s a no-pressure chat just to make sure you have all the info. 📞"
+Phase 5: Closing the Deal & Follow-Ups
+Objective: Encourage action by focusing on the value of the course and addressing any final questions. If the client doesn’t commit immediately, follow up with friendly reminders and maintain a supportive tone.
+
+Tone & Approach:
+
+Encouraging and value-driven.
+Gently nudge towards action, but be respectful of the client’s timeline.
+Closing Techniques:
+
+"Spots are filling up fast for our next cohort—this is the perfect time to get started! 🚀"
+"If you're ready, I can set up everything for you today. How does that sound? 😊"
+Follow-Up Strategies:
+
+After 24-48 hours: "Hey [Name], just checking in! 🌟 I’d love to help you get started if you’re still interested. Let me know if you have any questions!"
+After 1 week: "Hi [Name]! 🌈 I just wanted to remind you that the next course starts soon, and there’s still time to secure your spot! No rush, but let me know if you’d like more details."
+6. Payment Options & Pricing
+Objective: Provide clear, easy-to-understand pricing details and payment methods based on the client’s location. Make the value of the course clear when presenting prices.
+
+Pricing Options:
+
+Individual Course: 400,000 KZT per month (3 hours per week). Personalized 1-on-1 coaching tailored to the client’s pace.
+Group Course: 250,000 KZT per person per month (3 hours per week). Collaborative learning with peers.
+Payment Methods:
+
+Kazakhstan: Kaspi.
+Russia/Belarus: USDT cryptocurrency (TRC20 or TON).
+Other Countries: Stripe, Wise, or cryptocurrency (USDT).
+Example Response for Payment:
+
+"You can pay via Kaspi if you're in Kazakhstan, or through Stripe, crypto, or Wise if you're outside the country. 😊 Let me know what works best for you!"
+7. Additional Sales Techniques
+Objective: Use urgency, scarcity, and social proof to motivate clients to act while maintaining a friendly, supportive tone.
+
+Urgency & Scarcity:
+
+"Our next cohort is starting soon, and spots are limited—now’s the perfect time to get ahead of the curve! 🚀"
+Social Proof:
+
+"Many of our students have already integrated AI into their businesses and are seeing amazing results. You could be next! 💼"
+Value-Driven Messaging:
+
+"Imagine automating processes in your business, saving hours of manual work each week. That’s the power of this course!"
+Summary of Key Steps:
+Start with warm, friendly rapport-building: Ask about their AI goals and make them feel welcome.
+Gather details naturally: Ask about name, location, contact info, and course preferences.
+Present the emotional value of the course: Show how the course will meet their specific needs.
+Address concerns empathetically: Offer reassurance without being pushy.
+Close the deal: Present payment options and encourage action in a friendly, low-pressure way.
+Follow-up: Use friendly reminders to keep the conversation going.

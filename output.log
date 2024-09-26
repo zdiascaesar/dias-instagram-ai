@@ -1,0 +1,73 @@
+[2024-09-23 20:00:00] - SYSTEM UPDATE - Reminder Bot Enhancement
+The Reminder Bot feature has been enhanced with the following changes:
+
+1. Updated src/reminder_bot.py:
+   - Modified ReminderBot class to track multiple reminder stages.
+   - Implemented reminders at 12 hours, 1 week, 2 weeks, and 1 month intervals.
+   - Added customized reminder messages for each interval.
+
+2. Verified src/message_handler.py integration:
+   - Confirmed that the message handler correctly adds users to the reminder bot tracking system.
+
+The enhanced Reminder Bot will now send follow-up messages at the following intervals after the last user interaction:
+- 12 hours
+- 1 week
+- 2 weeks
+- 1 month
+
+Each reminder message is tailored to the specific time interval, encouraging user engagement at different stages of inactivity.
+
+Please monitor the system behavior and report any issues related to the new reminder intervals and messages.
+
+--- Existing log content below ---
+[2024-09-23 19:00:00] - SYSTEM UPDATE - Reminder Bot Implementation
+A new Reminder Bot feature has been implemented with the following changes:
+
+1. Created src/reminder_bot.py:
+   - Implemented ReminderBot class to track user messages and send reminders after 5 seconds of inactivity.
+   - Added functions to start the reminder bot and get its instance.
+
+2. Updated src/message_handler.py:
+   - Integrated reminder bot functionality in handle_instagram_message function.
+   - Added user messages to reminder bot tracking.
+
+3. Updated src/main.py:
+   - Added initialization of the reminder bot in the main function.
+
+The Reminder Bot will now automatically send a follow-up message to users who haven't replied within 5 seconds of their last message. This feature aims to improve user engagement and response rates.
+
+Please monitor the system behavior and report any issues related to the new Reminder Bot functionality.
+
+[2024-09-23 18:30:00] - SYSTEM UPDATE - Long message handling implemented
+The issue with messages exceeding the 1000 character limit has been resolved. The following changes were made:
+
+1. Updated instagram_api.py:
+   - Added a split_message function to break long messages into chunks of 1000 characters or less.
+   - Modified send_message and reply_to_comment functions to use the chunking mechanism when sending messages.
+
+2. Updated message_handler.py:
+   - Added more detailed logging to help diagnose any issues that might occur during message sending.
+
+These changes allow the system to automatically split long messages into smaller chunks before sending them via the Instagram API, preventing the "message length exceeds 1000 characters" error.
+
+No changes were required in main.py as it already utilizes the updated modules correctly.
+
+Please monitor the system behavior and report any issues related to message sending or splitting.
+
+--- Existing log content below ---
+2024-09-23 17:55:34,906 - utils - DEBUG - New message added to queue: 880602833576821:Что-то дорого:1727096190193
+2024-09-23 17:55:34,926 - utils - DEBUG - Detected language: Russian
+2024-09-23 17:55:34,926 - utils - DEBUG - Retrieving conversation history for user 880602833576821
+2024-09-23 17:55:55,094 - utils - DEBUG - Added message for user 880602833576821: user - Что-то дорого...
+2024-09-23 17:55:55,094 - utils - DEBUG - Added message for user 880602833576821: assistant - Я понимаю ваши сомнения насчет цены - инвестиции в...
+2024-09-23 17:55:56,011 - instagram_api - ERROR - Failed to send message. Error: 400, message='Bad Request', url='https://graph.facebook.com/v12.0/me/messages'
+2024-09-23 17:55:56,011 - instagram_api - ERROR - Error details: {
+  "error": {
+    "message": "(#100) \u0414\u043b\u0438\u043d\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u043f\u0440\u0435\u0432\u044b\u0448\u0430\u0435\u0442 1\u00a0000 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2534038,
+    "fbtrace_id": "AaZyBHnxPJHLdfe-FSDTUul"
+  }
+}
+2024-09-23 17:55:56,011 - message_handler - ERROR - Failed to send Instagram message
