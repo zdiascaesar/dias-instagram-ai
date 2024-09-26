@@ -73,7 +73,7 @@ async def get_clients_for_reminders() -> List[Dict[str, Any]]:
     """
     try:
         response = supabase.table("clients").select("*").or_(
-            "final_decision.eq.not sure,final_decision.eq.I will think about it,payment_status.eq.false"
+            "final_decision.eq.Uncertain,final_decision.eq.Leaning Towards Yes,final_decision.eq.Leaning Towards No,paid.eq.false"
         ).execute()
         data = response.data
         if data:

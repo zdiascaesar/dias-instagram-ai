@@ -18,6 +18,8 @@ class ReminderBot:
             (14 * 24 * 3600, "2 weeks"),
             (30 * 24 * 3600, "1 month")
         ]
+        self.running = False
+        self.task = None
 
     async def add_user_message(self, user_id):
         self.user_timestamps[user_id] = time.time()
@@ -54,14 +56,21 @@ class ReminderBot:
             logger.error(f"Failed to send targeted reminder to user {user_id}")
 
     async def run(self):
-        while True:
+        self.running = True
+        while self.running:
             await self.check_and_send_reminders()
-            await asyncio.sleep(3600 * 12)  # Check every 24 hours
+            await asyncio.sleep(3600 * 12)  # Check every 12 hours
+
+    def stop(self):
+        self.running = False
+        if self.task:
+            self.task.cancel()
+        logger.info("ReminderBot stopped")
 
 reminder_bot = ReminderBot()
 
 async def start_reminder_bot():
-    asyncio.create_task(reminder_bot.run())
+    reminder_bot.task = asyncio.create_task(reminder_bot.run())
 
 def get_reminder_bot():
     return reminder_bot
