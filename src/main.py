@@ -19,7 +19,8 @@ INSTAGRAM_TOKEN = os.getenv("INSTAGRAM_TOKEN")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 def setup_logging():
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    level = logging.DEBUG if not os.getenv('DYNO') else logging.INFO
+    logging.basicConfig(level=level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     return logging.getLogger(__name__)
 
 logger = setup_logging()
@@ -77,12 +78,16 @@ async def main():
     # Start the server
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 8080)
+    
+    # Use the PORT environment variable provided by Heroku, or default to 8080
+    port = int(os.environ.get("PORT", 8080))
+    host = os.environ.get("HOST", "0.0.0.0")
+    site = web.TCPSite(runner, host, port)
     
     try:
-        logger.info("Starting the server...")
+        logger.info(f"Starting the server on {host}:{port}...")
         await site.start()
-        logger.info("Server started on port 8080")
+        logger.info(f"Server started on {host}:{port}")
         
         # Start the batch processing coroutine
         logger.info("Starting batch processing task...")
